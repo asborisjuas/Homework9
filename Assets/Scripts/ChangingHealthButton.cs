@@ -1,14 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ChangingHealthButton : MonoBehaviour
+public abstract class ChangingHealthButton : MonoBehaviour
 {
-    [SerializeField] private Health _character;
-    [SerializeField] private int _delta;
-    [SerializeField] private bool _isDamage;
+    [SerializeField] protected Health Character;
+    [SerializeField] protected int Amount;
 
-    public void OnButtonClick()
+    private void OnValidate()
     {
-        _character.ChangeHealth(Mathf.Abs(_delta), _isDamage);
+        if (Amount < 0)
+        {
+            Amount *= -1;
+        }
     }
+
+    public abstract void OnButtonClick();
 }

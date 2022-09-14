@@ -528,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321638263120323067, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
       propertyPath: m_Name
-      value: TakeDamageButton
+      value: DamagingButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
@@ -551,12 +551,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1049297141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ec7b18b698e414baf31aaadac156d3, type: 3}
+  m_Script: {fileID: 11500000, guid: a1791818c228fe14e8c5ac1624c70db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 226772655}
-  _delta: 10
-  _isDamage: 1
+  Character: {fileID: 226772655}
+  Amount: 10
 --- !u!1 &1152073300
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321638263120323060, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChangingHealthButton, Assembly-CSharp
+      value: HealingButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2321638263120323060, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -938,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321638263120323067, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
       propertyPath: m_Name
-      value: TakeHealingButton
+      value: HealingButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46788f2147ca72249ac3e08a76524307, type: 3}
@@ -961,12 +960,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368834568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ec7b18b698e414baf31aaadac156d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 95c4dfe9a74515a40aebd47f6a317dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 226772655}
-  _delta: 10
-  _isDamage: 0
+  Character: {fileID: 226772655}
+  Amount: 10
 --- !u!1 &1523211366
 GameObject:
   m_ObjectHideFlags: 0

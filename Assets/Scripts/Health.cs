@@ -9,18 +9,17 @@ public class Health : MonoBehaviour
 
     public event Action<int> Changed;
 
-    public void ChangeHealth(int delta, bool isDamage)
+    public void Heal(int amount)
     {
-        if (isDamage)
-        {
-            _currentHealth -= delta;
-        }
-        else
-        {
-            _currentHealth += delta;
-        }
+        _currentHealth += amount;
+        _currentHealth = Math.Min(_currentHealth, MaxHealth);
+        Changed?.Invoke(_currentHealth);
+    }
 
-        _currentHealth = Math.Clamp(_currentHealth, 0, MaxHealth);
+    public void Damage(int amount)
+    {
+        _currentHealth -= amount;
+        _currentHealth = Math.Max(0, _currentHealth);
         Changed?.Invoke(_currentHealth);
     }
 }
